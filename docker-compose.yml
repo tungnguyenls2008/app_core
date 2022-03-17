@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      io.portainer.accesscontrol.teams: dev
+    image: digitalocean.com/php
+    container_name: app
+    restart: unless-stopped
+    tty: true
+    working_dir: /var/www
+    command:
+      - chmod 775 -R /var/www/storage
+      - chmod -R 775 /var/www/public/img/organization_logos
+    ports:
+      - "30080:80"

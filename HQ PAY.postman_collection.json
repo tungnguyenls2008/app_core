@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "92d8ad76-f57b-4240-8e6f-57bece191e7f",
+		"name": "HQ PAY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "epg callback",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "asdasd",
+							"value": "asdasdasd",
+							"type": "text"
+						},
+						{
+							"key": "werwerw",
+							"value": "werwer",
+							"type": "text"
+						},
+						{
+							"key": "fghfhfg",
+							"value": "fghfgh",
+							"type": "text"
+						},
+						{
+							"key": "cvbcvb",
+							"value": "cvbcvb",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://merchant.hqpay.vn/api/epg-callback",
+					"protocol": "http",
+					"host": [
+						"merchant",
+						"hqpay",
+						"vn"
+					],
+					"path": [
+						"api",
+						"epg-callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inquiry",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ftType",
+							"value": "ACC",
+							"type": "text"
+						},
+						{
+							"key": "numberOfBeneficiary",
+							"value": "107000852416",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "1000000",
+							"type": "text"
+						},
+						{
+							"key": "bankId",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "sdfsdfs",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://tapi.ecomit.vn/openbanking/22:07d91f34d600/inquiry",
+					"protocol": "https",
+					"host": [
+						"tapi",
+						"ecomit",
+						"vn"
+					],
+					"path": [
+						"openbanking",
+						"22:07d91f34d600",
+						"inquiry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://tapi.ecomit.vn/openbanking/22:07d91f34d600/transfer?ftType=ACC&numberOfBeneficiary=0129837294&amount=1000000&bankId=20&description=sdfsdfs&requestId=23424&nameOfBeneficiary=asdasdassd",
+					"protocol": "https",
+					"host": [
+						"tapi",
+						"ecomit",
+						"vn"
+					],
+					"path": [
+						"openbanking",
+						"22:07d91f34d600",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "ftType",
+							"value": "ACC"
+						},
+						{
+							"key": "numberOfBeneficiary",
+							"value": "0129837294"
+						},
+						{
+							"key": "amount",
+							"value": "1000000"
+						},
+						{
+							"key": "bankId",
+							"value": "20"
+						},
+						{
+							"key": "description",
+							"value": "sdfsdfs"
+						},
+						{
+							"key": "requestId",
+							"value": "23424"
+						},
+						{
+							"key": "nameOfBeneficiary",
+							"value": "asdasdassd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "banks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://tapi.ecomit.vn/openbanking/22:07d91f34d600/banks",
+					"protocol": "https",
+					"host": [
+						"tapi",
+						"ecomit",
+						"vn"
+					],
+					"path": [
+						"openbanking",
+						"22:07d91f34d600",
+						"banks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
